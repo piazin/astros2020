@@ -1,3 +1,11 @@
 config:
-  rule: rule-1
-  rule2: rule-2
+  objective: "http://localhost:3000/api"
+  strategie:
+    duration: 10
+    attack_per_second: 20
+scenarios:
+  - flow:
+      - get:
+          url: "/users"
+      - get:
+          url: "/users/1"
